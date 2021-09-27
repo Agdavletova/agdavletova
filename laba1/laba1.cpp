@@ -2,10 +2,31 @@
 //
 
 #include <iostream>
+using namespace std;
+struct pipe
 
+{
+	int id;
+	double length;
+};
+void PrintPipe (pipe&p)
+{
+	cout << "You entered:" << p.length << endl;
+
+}
+pipe CreatePipe()
+{
+	pipe p; 
+	p.id = 0;
+	cout << "Enter length:";
+	cin >> p.length;
+	return p;
+}
 int main()
 {
-    std::cout << "Hello World!\n";
+	pipe p = CreatePipe();
+	PrintPipe(p);
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
